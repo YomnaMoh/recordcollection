@@ -1,0 +1,301 @@
+/* --- HALF PAGES: */
+
+* {
+    box-sizing: border-box;
+  }
+
+  body {
+    display: flex; /* prevents weird whitespace issues */
+    margin: 0; /* makes the website take up the whole window */
+}
+
+section {
+    display: inline-block; /* inline: allows multiple side by side. block: allows for more complex styling */
+    width: 50%; /* make each section have a width of 50% of the window */
+    height: 100vh; /* make the sections take up 100% of the vertical height of the window */
+    overflow-y: auto; /* if the content of a section does not fit, the section will be scrollable vertically (on the y axis) */
+    /* the following css is irrelevant styling */
+    font-size: 5vmin;
+    word-wrap: break-word;
+}
+
+section:nth-child(1) {
+  background-color: rgb(255, 255, 255);
+    }
+
+
+section:nth-child(2) {
+  
+      background-color: rgb(255, 255, 255);
+  background-image: 
+     linear-gradient(45deg, black 25%, transparent 25%, 
+      transparent 75%, black 75%, black),
+      linear-gradient(-45deg, black 25%, transparent 25%, 
+      transparent 75%, black 75%, black);
+     background-size: 60px 60px; 
+ }
+/* --- HALF PAGES: */
+
+
+
+
+
+ /* --- RECORDS GRID: */
+  body {
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    line-height: 1.4;
+    font-family: Helvetica, sans-serif;
+    color: #F0F0F0;
+    margin: 0;
+    padding: 0 30px;
+    font-family: 'Space Mono', monospace;
+    text-rendering: geometricprecision;
+    -webkit-font-smoothing: subpixel-antialiased;  
+  }
+  
+  h1 {
+    font-size: 100px;
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    margin: 0 0 1em;
+    padding-top: 1em;
+  }
+  
+  img {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+  
+  a {
+    color: #00ff57;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  #albums-list {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 100px;
+  }
+  
+  .album {
+    border: 1px solid #595959;
+    border-radius: 7px;
+    background-color: rgba(0 0 0 / 0.5);
+    backdrop-filter: blur(4px);
+    padding: 12px;
+  }
+  
+  .album img {
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+
+  .grid{
+    width: 45vw;
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+  .grid img{
+    width: 20vw;
+    height: auto;
+    justify-items: center;
+    align-items: center;
+    margin: 1vw 0 1vw 0;
+  }
+ /* --- RECORDS GRID: */
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* --- RECORD PLAYER: */
+
+  * {
+    padding: 0;
+    margin: 0;
+  }
+  body {
+    background-color: #ffffff;
+  }
+  .player {
+    background-color: #d52f31;
+    width: 330px;
+    height: 190px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 8px;
+    box-shadow: 0 8px 0 0 #be272a; 
+  }
+
+  .record {
+    height: 175px;
+    width: 175px;
+    background-color: #181312;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .record:before,
+  .record:after {
+    position: absolute;
+    content: "";
+    border: 5px solid transparent;
+    border-top-color: #2c2424;
+    border-bottom-color: #2c2424;
+    border-radius: 50%;
+  }
+  .record:before {
+    height: 135px;
+    width: 135px;
+  }
+  .record:after {
+    height: 95px;
+    width: 95px;
+  }
+  .label {
+    background-color: #181312;
+    height: 15px;
+    width: 15px;
+    border: 20px solid #ff8e00;
+    border-radius: 50%;
+  }
+  .tone-arm {
+    height: 90px;
+    width: 6px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 25px;
+    right: 95px;
+    transition: 1s;
+    transform-origin: top;
+  }
+  .control {
+    background-color: #181312;
+    height: 17px;
+    width: 17px;
+    border: 10px solid #2c2c2c;
+    border-radius: 50%;
+    position: absolute;
+    top: -16px;
+    left: -16px;
+  }
+  .tone-arm:before {
+    content: "";
+    height: 40px;
+    width: 6px;
+    background-color: #ffffff;
+    position: absolute;
+    transform: rotate(30deg);
+    bottom: -36px;
+    right: 10px;
+  }
+  .tone-arm:after {
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 10px;
+    border-top: 18px solid #b2aea6;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+    top: 108px;
+    right: 12.5px;
+    transform: rotate(30deg);
+  }
+  .btn {
+    height: 28px;
+    width: 28px;
+    background-color: #ed5650;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    border: none;
+    border: 3.5px solid #be272a;
+    outline: none;
+    cursor: pointer;
+  }
+  .slider {
+    -webkit-appearance: none;
+    appearance: none;
+    transform: rotate(-90deg);
+    width: 90px;
+    height: 7px;
+    position: absolute;
+    left: 233px;
+    top: 60px;
+    background-color: #be272a;
+    outline: none;
+    border-radius: 3px;
+    border: 6px solid #ed5650;
+  }
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 12px;
+    background-color: #ffffff;
+    cursor: pointer;
+  }
+  .play {
+    transform: rotate(30deg);
+    transform-origin: top;
+    transition: 1s;
+  }
+  .on {
+    animation: spin 3s 1s linear infinite;
+  }
+  @keyframes spin {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+   /* --- RECORD PLAYER: */
+
+
+
+
+
+   /* --- BLANK ANIMATIONS: */
+
+   @keyframes blink {
+    0% {opacity: 0}
+    49%{opacity: 0}
+    50% {opacity: 1}
+  }
+  
+  blink{animation: blink 1s infinite;}   
+  /* --- BLINK ANIMATIONS: */
+
+
